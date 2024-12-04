@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary</title>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f2, #ffccff);
+      margin: 0;
+      font-family: 'font kanit/kanit', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #ff4da6;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 2.5em;
+      text-align: center;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .cute-button {
+      position: relative;
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      background: linear-gradient(135deg, #ff80bf, #ff66ff);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      margin: 20px 0;
+    }
+
+    .cute-button span {
+      position: absolute;
+      display: block;
+    }
+
+    .cute-button span:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: skewX(-45deg);
+      transition: 0.5s;
+    }
+
+    .cute-button:hover span:nth-child(1) {
+      left: 100%;
+    }
+
+    .cute-button span:nth-child(2) {
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1) translate(-50%, -50%);
+      }
+      50% {
+        transform: scale(1.5) translate(-50%, -50%);
+      }
+    }
+
+    .cute-button:hover {
+      background: linear-gradient(135deg, #ff66ff, #ff80bf);
+      transform: scale(1.1);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .cute-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-container {
+      margin-top: 20px;
+      text-align: center;
+      background-color: white;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      max-width: 80%; /* กำหนดให้กล่องไม่เกิน 80% ของหน้าจอ */
+      position: relative; /* สำคัญ: ใช้เพื่อจัดข้อความซ้อน */
+    }
+
+    .image-container img {
+      width: 100%; /* ขนาดรูปปรับตามกล่อง */
+      max-width: 500px; /* จำกัดความกว้างสูงสุด */
+      height: auto; /* รักษาสัดส่วนรูป */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .cute-button {
+        padding: 12px 25px;
+        font-size: 1.2em;
+      }
+
+      .image-container {
+        max-width: 90%;
+      }
+    }
+
+    .text-overlay {
+      position: absolute; /* จัดข้อความให้ซ้อนทับรูป */
+      bottom: 15px; /* จัดตำแหน่งข้อความ */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6); /* พื้นหลังโปร่งใส */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .cute-button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+
+      .image-container {
+        max-width: 90%; /* ลดขนาดกล่องลง */
+        padding: 10px; /* ลด Padding ให้กระชับ */
+      }
+
+      .image-container img {
+        max-width: 100%; /* ลดขนาดรูปภาพให้พอดี */
+      }
+
+      .text-overlay {
+        font-size: 1em; /* ลดขนาดข้อความสำหรับมือถือ */
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Happy Anniversary 💖</h1>
+  <button class="cute-button" onclick="document.location = 'music.html'">
+    <span></span>
+    <span></span>
+    Click Me
+  </button>
+  <div class="image-container">
+    <img src="รูป/58.jpg" alt="Anniversary Image">
+    <div class="text-overlay">Happy 1 Year Anniversary 💖</div>
+  </div>
+</body>
+</html>
