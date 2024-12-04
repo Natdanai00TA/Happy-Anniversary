@@ -159,7 +159,7 @@ function showNextPageButton() {
   
   const nextPageButton = document.getElementById('nextPageButton');
   nextPageButton.addEventListener('click', () => {
-    window.location.href = 'index3.html'; // เปลี่ยนลิงก์ไปหน้าถัดไป
+    window.location.href = 'password.html'; // เปลี่ยนลิงก์ไปหน้าถัดไป
   });
 
   // ลบการ fadeOut เพื่อไม่ให้ปุ่มหาย
